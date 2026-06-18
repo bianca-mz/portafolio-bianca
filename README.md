@@ -1,10 +1,10 @@
 <div align="center">
 
-# 🎨 Portafolio de Bianca Sánchez
+# 🎨 Bianca Sánchez's Portfolio
 
-### Desarrolladora de Software Junior
+### Junior Software Developer
 
-¡Hola! Soy Bianca, desarrolladora de software junior. Me dedico a crear aplicaciones y páginas web donde el código sólido se da la mano con un diseño bonito y fácil de usar.
+Hi! I'm Bianca, a junior software developer. I focus on building applications and websites where solid code meets a design that's both beautiful and easy to use.
 
 [![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -14,72 +14,77 @@
 
 ---
 
-## 📋 Sobre el proyecto
+## 📋 About the project
 
-Este repositorio documenta el proceso completo de creación de mi portafolio personal, desde el scaffold inicial hasta el resultado final. La idea es mostrar no solo el producto terminado, sino también cómo fue construyéndose paso a paso.
+This repository documents the full process of building my personal portfolio, from the initial scaffold to the final result. The goal is to show not just the finished product, but how it was built step by step.
 
-**Diseño:** estética minimalista, paleta de colores pastel y degradados suaves, con tipografía cursiva como acento decorativo.
+**Design:** minimalist aesthetic, pastel color palette and soft gradients, with a cursive typeface as a decorative accent.
 
-## ✨ Secciones del sitio
+## ✨ Site sections
 
-- **Hero** — Presentación personal con avatar ilustrado y botón de llamada a la acción
-- **Proyectos** — Sección interactiva con pestañas para navegar entre distintos trabajos (Sanrio Clicker, SongSwipe, y más)
-- **Contacto** — Enlaces directos a GitHub, LinkedIn y correo
+- **Hero** — Personal introduction with an illustrated avatar and a call-to-action button
+- **Projects** — Interactive section with tabs to navigate between different works (Sanrio Clicker, SongSwipe, and more)
+- **Contact** — Direct links to GitHub, LinkedIn and email
 
-## 🛠️ Tecnologías utilizadas
+## 🛠️ Tech stack
 
-- **[Astro](https://astro.build)** — Framework principal, renderizado estático
-- **HTML5** semántico
-- **CSS3** — Estilos con scoped styles de Astro, degradados y diseño responsive
+- **[Astro](https://astro.build)** — Main framework, static site rendering
+- **HTML5** semantic markup
+- **CSS3** — Styling with Astro's scoped styles, gradients and responsive design
 
-## 📂 Estructura del proyecto
+## 📂 Project structure
 
 ```
 portafolio-bianca/
 ├── public/
-│   └── (imágenes, favicon)
+│   └── (images, favicon)
 ├── src/
-│   ├── components/      # Componentes reutilizables (Header, Hero, Proyectos, Footer)
-│   ├── layouts/         # Layout base del sitio
+│   ├── components/      # Reusable components (Header, Hero, Projects, Footer)
+│   ├── layouts/         # Base site layout
 │   └── pages/
-│       └── index.astro  # Página principal
+│       └── index.astro  # Main page
 ├── astro.config.mjs
 └── package.json
 ```
 
-## 🚀 Cómo correrlo localmente
+## 🚀 Running locally
 
 ```bash
-# Clonar el repositorio
+# Clone the repository
 git clone https://github.com/bianca-mz/portafolio-bianca.git
 
-# Entrar a la carpeta
+# Move into the folder
 cd portafolio-bianca
 
-# Instalar dependencias
+# Install dependencies
 npm install
 
-# Iniciar servidor de desarrollo
+# Start the dev server
 npm run dev
 ```
 
-El sitio quedará disponible en `http://localhost:4321`
+The site will be available at `http://localhost:4321`
 
-## 📈 Progreso del proyecto
+## 📈 Project progress
 
-- [x] Scaffold inicial con Astro
-- [ ] Layout base (fuentes, degradado de fondo)
-- [ ] Componente Header (iconos GitHub/LinkedIn)
-- [ ] Sección Hero
-- [ ] Sección Proyectos con pestañas interactivas
-- [ ] Sección Contacto
+- [x] Initial Astro scaffold
+- [ ] Base layout (fonts, background gradient)
+- [ ] Header component (GitHub/LinkedIn icons)
+- [ ] Hero section
+- [ ] Projects section with interactive tabs
+- [ ] Contact section
 - [ ] Responsive design
-- [ ] Despliegue en producción
+- [ ] Production deployment
 
-## 📬 Contacto
+## 📬 Contact
 
 📧 bmszsanchez@gmail.com
 
+---
+
+<div align="center">
+Made with 💛 by Bianca Sánchez
+</div>
 ---
 
 <div align="center">
