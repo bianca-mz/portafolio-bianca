@@ -87,6 +87,3 @@ Made with 💛 by Bianca Sánchez
 </div>
 ---
 
-<div align="center">
-Hecho con 💛 por Bianca Sánchez
-</div>
