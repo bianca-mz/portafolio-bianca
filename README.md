@@ -1,46 +1,89 @@
-# Astro Starter Kit: Basics
+<div align="center">
 
-```sh
-npm create astro@latest -- --template basics
+# 🎨 Bianca Sánchez's Portfolio
+
+### Junior Software Developer
+
+Hi! I'm Bianca, a junior software developer. I focus on building applications and websites where solid code meets a design that's both beautiful and easy to use.
+
+[![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+</div>
+
+---
+
+## 📋 About the project
+
+This repository documents the full process of building my personal portfolio, from the initial scaffold to the final result. The goal is to show not just the finished product, but how it was built step by step.
+
+**Design:** minimalist aesthetic, pastel color palette and soft gradients, with a cursive typeface as a decorative accent.
+
+## ✨ Site sections
+
+- **Hero** — Personal introduction with an illustrated avatar and a call-to-action button
+- **Projects** — Interactive section with tabs to navigate between different works (Sanrio Clicker, SongSwipe, and more)
+- **Contact** — Direct links to GitHub, LinkedIn and email
+
+## 🛠️ Tech stack
+
+- **[Astro](https://astro.build)** — Main framework, static site rendering
+- **HTML5** semantic markup
+- **CSS3** — Styling with Astro's scoped styles, gradients and responsive design
+
+## 📂 Project structure
+
 ```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
+portafolio-bianca/
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   └── (images, favicon)
+├── src/
+│   ├── components/      # Reusable components (Header, Hero, Projects, Footer)
+│   ├── layouts/         # Base site layout
+│   └── pages/
+│       └── index.astro  # Main page
+├── astro.config.mjs
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🚀 Running locally
 
-## 🧞 Commands
+```bash
+# Clone the repository
+git clone https://github.com/bianca-mz/portafolio-bianca.git
 
-All commands are run from the root of the project, from a terminal:
+# Move into the folder
+cd portafolio-bianca
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+# Install dependencies
+npm install
 
-## 👀 Want to learn more?
+# Start the dev server
+npm run dev
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The site will be available at `http://localhost:4321`
+
+## 📈 Project progress
+
+- [x] Initial Astro scaffold
+- [ ] Base layout (fonts, background gradient)
+- [ ] Header component (GitHub/LinkedIn icons)
+- [ ] Hero section
+- [ ] Projects section with interactive tabs
+- [ ] Contact section
+- [ ] Responsive design
+- [ ] Production deployment
+
+## 📬 Contact
+
+📧 bmszsanchez@gmail.com
+
+---
+
+<div align="center">
+Made with 💛 by Bianca Sánchez
+</div>
+---
+
