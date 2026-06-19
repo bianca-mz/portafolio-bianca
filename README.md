@@ -70,8 +70,8 @@ The site will be available at `http://localhost:4321`
 - [x] Initial Astro scaffold
 - [x] Base layout (fonts, background gradient)
 - [x] Header component (GitHub/LinkedIn icons)
-- [ ] Hero section
-- [ ] Projects section with interactive tabs
+- [x] Hero section
+- [x] Projects section with interactive tabs
 - [ ] Contact section
 - [ ] Responsive design
 - [ ] Production deployment
