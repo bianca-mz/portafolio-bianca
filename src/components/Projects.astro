@@ -1,0 +1,333 @@
+---
+const projects = [
+  {
+    id: "sanrio-clicker",
+    label: "Sanrio Clicker",
+    repo: "https://github.com/bianca-mz/sanrio-clicker",
+    description: "Clicker game developed with Kotlin Multiplatform inspired by the Sanrio universe. Players interact with characters and collectibles while progressing through the game.",
+    tech: ["Kotlin", "Compose Multiplatform", "MVVM", "Gradle"],
+    media: { type: "video", file: "/images/sanrioclicker-video.mp4"}  },
+  {
+    id: "songswipe",
+    label: "SongSwipe",
+    repo: "https://github.com/selfishara/song-swipe-frontend",
+    description: "Mobile app for music discovery inspired by Tinder-style interaction. Users discover songs by swiping right to like or left to skip, with Spotify integration.",
+    tech: ["Kotlin", "Jetpack Compose", "Supabase", "Spotify API", "OAuth2 PKCE", "MVVM"],
+    media: { type: "video", file: "/images/songswipe.mp4" },
+  },
+  {
+    id: "maps-app",
+    label: "Maps App",
+    repo: "https://github.com/bianca-mz/geographic-markers-app",
+    description: "Android app built with Kotlin and Jetpack Compose for creating, viewing, editing and deleting geographic markers on an interactive map, with image upload via Supabase Storage.",
+    tech: ["Kotlin", "Jetpack Compose", "Google Maps SDK", "Supabase", "MVVM", "Coil"],
+    media: { type: "coming-soon" },
+  },
+];
+---
+
+<section class="projects" id="proyectos">
+  <div class="projects-header">
+    <div class="projects-title">
+      <h2 class="font-cursive">Projects</h2>
+      <p>A glimpse of my code. Click the tabs to explore my most recent work.</p>
+    </div>
+  </div>
+
+  <div class="projects-card">
+    <div class="tabs">
+      {projects.map((p, i) => (
+        <button class={`tab ${i === 0 ? "active" : ""}`} data-target={p.id}>
+          {p.label}
+        </button>
+      ))}
+    </div>
+
+    <div class="panels">
+      {projects.map((p, i) => (
+        <div class={`panel ${i === 0 ? "active" : ""}`} id={p.id}>
+          <div class="panel-inner">
+
+            {/* LEFT — media */}
+            <div class="media-col">
+              {p.media.type === "video" && (
+                <div class="video-wrap">
+                    <video controls muted loop playsinline class="project-video">
+                     <source src={p.media.file} type="video/mp4"/>
+                     Tu navegador  no soporta este formato. 
+                    </video>
+                </div>
+              )}
+
+              {p.media.type === "coming-soon" && (
+                <div class="coming-soon">Coming soon</div>
+              )}
+            </div>
+
+            {/* RIGHT — info */}
+            <div class="info-col">
+              <h3 class="project-title">{p.label}</h3>
+              <p class="project-desc">{p.description}</p>
+              <div class="tech-tags">
+                {p.tech.map(t => <span class="tag">{t}</span>)}
+              </div>
+              {p.repo && (
+                <a href={p.repo} target="_blank" rel="noopener noreferrer" class="repo-link">
+                  View on GitHub →
+                </a>
+              )}
+            </div>
+
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    padding: 2rem 4rem 3rem;
+  }
+
+  .projects-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .projects-title {
+    text-align: center;
+  }
+
+  .projects-title h2 {
+    font-size: 3rem;
+    margin-bottom: 0.25rem;
+    color: var(--color-text-dark);
+  }
+
+  .projects-title p {
+    font-size: 0.9rem;
+    color: var(--color-text-dark);
+    max-width: 280px;
+    margin-left: 0 auto;
+  }
+
+  .projects-card {
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+  }
+
+  /* Tabs */
+  .tabs {
+    display: flex;
+    padding: 0.75rem 1rem 0;
+    gap: 0.4rem;
+  }
+
+  .tab {
+    padding: 0.4rem 1.1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.4);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 999px;
+    color: var(--color-text-dark);
+    transition: background 0.2s ease;
+  }
+
+  .tab.active {
+    background: white;
+  }
+
+  .tab:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  /* Panels */
+  .panel {
+    display: none;
+    padding: 1.25rem 1.5rem 1.5rem;
+  }
+
+  .panel.active {
+    display: block;
+  }
+
+  .panel-inner {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  /* Media column */
+  .media-col {
+    flex: 0 0 45%;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .gallery {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .gallery-img {
+    display: none;
+    width: 100%;
+    max-height: 240px;
+    object-fit: contain;
+  }
+
+  .gallery-img.visible {
+    display: block;
+  }
+
+  .gallery-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.4rem;
+  }
+
+  .gallery-btn {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-btn:hover {
+    background: white;
+  }
+
+  .gallery-counter {
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .video-wrap {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  .project-video {
+    width: 100%;
+    max-height: 240px;
+    object-fit: contain;
+    display: block;
+  }
+
+  .coming-soon {
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0.45;
+    border-radius: 0.75rem;
+    background: rgba(0, 0, 0, 0.04);
+  }
+
+  /* Info column */
+  .info-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .project-title {
+    font-family: var(--font-cursive);
+    font-size: 1.8rem;
+    color: var(--color-text-dark);
+  }
+
+  .project-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--color-text-dark);
+  }
+
+  .tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .tag {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+  }
+
+  .repo-link {
+    display: inline-block;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    text-decoration: underline;
+    transition: opacity 0.2s;
+    margin-top: 0.25rem;
+  }
+
+  .repo-link:hover {
+    opacity: 0.6;
+  }
+</style>
+
+<script>
+  // Tabs
+  document.querySelectorAll(".tab").forEach(tab => {
+    tab.addEventListener("click", () => {
+      document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+      document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+      tab.classList.add("active");
+      document.getElementById(tab.getAttribute("data-target"))?.classList.add("active");
+    });
+  });
+
+  // Gallery
+  document.querySelectorAll(".gallery").forEach(gallery => {
+    const imgs = gallery.querySelectorAll(".gallery-img");
+    const counter = gallery.querySelector(".gallery-counter");
+    let current = 0;
+
+    function show(i) {
+      imgs.forEach(img => img.classList.remove("visible"));
+      imgs[i].classList.add("visible");
+      if (counter) counter.textContent = `${i + 1} / ${imgs.length}`;
+    }
+
+    gallery.querySelector(".prev")?.addEventListener("click", () => {
+      current = (current - 1 + imgs.length) % imgs.length;
+      show(current);
+    });
+
+    gallery.querySelector(".next")?.addEventListener("click", () => {
+      current = (current + 1) % imgs.length;
+      show(current);
+    });
+  });
+</script>
